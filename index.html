@@ -80,12 +80,27 @@
             scroll-margin-top: 80px;
         }
 
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; visibility: hidden; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         .animate-fade-in-up {
             animation: fadeInUp 1s ease-out;
         }
 
         .animate-float {
             animation: float 3s ease-in-out infinite;
+        }
+
+        /* Smooth transitions */
+        #intro, #mainContent {
+            transition: opacity 0.8s ease, visibility 0.8s ease;
         }
     </style>
 </head>
@@ -228,6 +243,159 @@
             </div>
         </section>
 
+        <!-- Packages Section -->
+        <section id="packages" class="py-20 px-4 grid-bg">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Building Planning Packages</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-amber-500 mx-auto"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="glass-effect rounded-xl p-8 hover-lift">
+                        <h3 class="text-2xl font-bold mb-2">BASIC PLANNING</h3>
+                        <p class="text-blue-300 mb-4">Essential Documentation</p>
+                        <div class="text-3xl font-bold text-amber-400 mb-6">Starting Package</div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-gray-300">2D Floor Plans</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-gray-300">Structural Design</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-gray-300">Estimation & Costing</span>
+                            </li>
+                        </ul>
+                        <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" class="w-full py-3 rounded-lg font-semibold transition bg-blue-600 hover:bg-blue-700">Choose Package</button>
+                    </div>
+
+                    <div class="glass-effect rounded-xl p-8 hover-lift ring-2 ring-amber-400">
+                        <div class="bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 text-sm font-bold px-4 py-1 rounded-full inline-block mb-4">MOST POPULAR</div>
+                        <h3 class="text-2xl font-bold mb-2">STANDARD PACKAGE</h3>
+                        <p class="text-blue-300 mb-4">Complete Planning</p>
+                        <div class="text-3xl font-bold text-amber-400 mb-6">Most Popular</div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-gray-300">2D Floor Plans</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-gray-300">Structural Design</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-gray-300">Estimation & Costing</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-gray-300">3D Elevation</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-gray-300">Interior Layout</span>
+                            </li>
+                        </ul>
+                        <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" class="w-full py-3 rounded-lg font-semibold transition bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 hover:from-amber-500 hover:to-amber-600">Choose Package</button>
+                    </div>
+
+                    <div class="glass-effect rounded-xl p-8 hover-lift">
+                        <h3 class="text-2xl font-bold mb-2">FULL SERVICE</h3>
+                        <p class="text-blue-300 mb-4">End-to-End Solution</p>
+                        <div class="text-3xl font-bold text-amber-400 mb-6">Premium Package</div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-gray-300">Everything in Standard</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-gray-300">Detailed Interior Design</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-gray-300">Project Supervision</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-gray-300">Quality Assurance</span>
+                            </li>
+                        </ul>
+                        <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" class="w-full py-3 rounded-lg font-semibold transition bg-blue-600 hover:bg-blue-700">Choose Package</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section id="why-us" class="py-20 px-4 bg-gradient-to-b from-slate-800 to-slate-900">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Why Choose Us?</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-amber-500 mx-auto"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <div class="glass-effect rounded-lg p-6 flex items-center gap-4 hover-lift">
+                        <svg class="w-8 h-8 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span class="text-lg">Practical & Build-Ready Designs</span>
+                    </div>
+                    <div class="glass-effect rounded-lg p-6 flex items-center gap-4 hover-lift">
+                        <svg class="w-8 h-8 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span class="text-lg">Clear Planning with Cost Efficiency</span>
+                    </div>
+                    <div class="glass-effect rounded-lg p-6 flex items-center gap-4 hover-lift">
+                        <svg class="w-8 h-8 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span class="text-lg">Professional Drawings & Detailed Sketches</span>
+                    </div>
+                    <div class="glass-effect rounded-lg p-6 flex items-center gap-4 hover-lift">
+                        <svg class="w-8 h-8 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span class="text-lg">Client-Focused Approach</span>
+                    </div>
+                    <div class="glass-effect rounded-lg p-6 flex items-center gap-4 hover-lift md:col-span-2">
+                        <svg class="w-8 h-8 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span class="text-lg">On-Time Delivery & Reliable Support</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section id="contact" class="py-20 px-4 bg-slate-900">
             <div class="max-w-7xl mx-auto">
@@ -285,13 +453,29 @@
     </div>
 
     <script>
-        // Skip intro function
+        // Skip intro function with smooth transition
         function skipIntro() {
-            document.getElementById('intro').style.display = 'none';
-            document.getElementById('mainContent').style.display = 'block';
+            const intro = document.getElementById('intro');
+            const mainContent = document.getElementById('mainContent');
+            
+            // Fade out intro
+            intro.style.opacity = '0';
+            
+            // After fade out, hide intro and show main content
+            setTimeout(() => {
+                intro.style.display = 'none';
+                intro.style.visibility = 'hidden';
+                mainContent.style.display = 'block';
+                mainContent.style.opacity = '0';
+                
+                // Fade in main content
+                setTimeout(() => {
+                    mainContent.style.opacity = '1';
+                }, 50);
+            }, 800);
         }
 
-        // Auto-skip intro after 4.5 seconds
+        // Auto-skip intro after 4.5 seconds with smooth transition
         setTimeout(skipIntro, 4500);
 
         // Mobile menu toggle
