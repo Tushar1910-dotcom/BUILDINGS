@@ -1,5 +1,17 @@
 // Structora Planning Studio - JavaScript
 
+// Skip Intro Function
+function skipIntro() {
+    const intro = document.getElementById('intro');
+    const mainContent = document.getElementById('main-content');
+    
+    if (intro) intro.style.display = 'none';
+    if (mainContent) {
+        mainContent.style.display = 'block';
+        mainContent.style.opacity = '1';
+    }
+}
+
 // Intro Animation
 window.addEventListener('DOMContentLoaded', () => {
     const intro = document.getElementById('intro');
