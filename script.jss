@@ -5,11 +5,20 @@ window.addEventListener('DOMContentLoaded', () => {
     const intro = document.getElementById('intro');
     const mainContent = document.getElementById('main-content');
     
-    // Hide intro after 4.5 seconds
+    // Show main content immediately for testing, hide intro after 4.5 seconds
     setTimeout(() => {
-        intro.style.display = 'none';
-        mainContent.style.display = 'block';
+        if (intro) intro.style.display = 'none';
+        if (mainContent) mainContent.style.display = 'block';
     }, 4500);
+    
+    // Fallback - force show content after 5 seconds no matter what
+    setTimeout(() => {
+        if (intro) intro.style.display = 'none';
+        if (mainContent) {
+            mainContent.style.display = 'block';
+            mainContent.style.opacity = '1';
+        }
+    }, 5000);
 });
 
 // Mobile Menu Toggle
